@@ -128,5 +128,7 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-#Ignore whatsapp chats
-.exports/
+#Ignore whatsapp chats and driver
+exports/*
+restored/*
+chromedriver
