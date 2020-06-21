@@ -78,7 +78,6 @@ for file in os.listdir(chatsFolder):
     message = ""    
     for line in Lines:
         if is_date(line[0:8]):
-            #  replace emoji in msg with black
             whatsapp.sendMessage(emoji.demojize(message, delimiters=("", "")))
             message = line   
         else:
