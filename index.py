@@ -1,5 +1,6 @@
 import os
 import time
+import emoji
 from dateutil.parser import parse
 from whatsapp import browserAutomation
 import config as cfg
@@ -77,7 +78,7 @@ for file in os.listdir(chatsFolder):
     message = ""    
     for line in Lines:
         if is_date(line[0:8]):
-            whatsapp.sendMessage(message)
+            whatsapp.sendMessage(emoji.demojize(message, delimiters=("", "")))
             message = line   
         else:
             message = message + line

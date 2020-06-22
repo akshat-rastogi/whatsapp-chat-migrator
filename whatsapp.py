@@ -52,6 +52,5 @@ class browserAutomation:
         inp_xpath = '//div[@class="_3FRCZ copyable-text selectable-text"][@dir="ltr"][@data-tab="1"]'
         input_box = self.__wait.until(EC.presence_of_element_located(( By.XPATH, inp_xpath)))
         input_box.send_keys(string + Keys.ENTER)
-        print(string)
         time.sleep(2)
 
